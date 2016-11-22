@@ -1,0 +1,5 @@
+---
+- name: Install OpenLDAP client
+  yum: 
+    name: "{{ openldapclient }}"
+    state: present

@@ -1,0 +1,16 @@
+---
+- name: Install OpenLDAP server
+  yum: 
+    name: "{{ openldapserver }}"
+    state: present
+
+- name: Start OpenLDAP on boot
+  service:
+    name: slapd
+    enabled: yes
+  notify:
+    - Start OpenLDAP services
+
+- name: Install Kerberos LDAP Schema
+  yum:
+    name: krb5-server-ldap

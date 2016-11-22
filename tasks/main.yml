@@ -1,0 +1,7 @@
+---
+- include: client.yml
+  tags: ['client']
+- include: server.yml
+  tags: ['server']
+- include: configmaster.yml
+  tags: ['server', 'master']
