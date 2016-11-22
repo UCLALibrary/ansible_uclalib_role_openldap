@@ -1,0 +1,8 @@
+---
+openldap: openldap
+openldapclient: openldap-clients
+openldapserver: openldap-servers
+openldappath: /etc/openldap
+olcSuffix: dc=test,dc=com
+olcRootDN: cn=admin,dc=test,dc=com
+olcRootPW: "{SSHA}3JtdimUEkudnyzYDXd3kN/XCwpD/GP0f"
