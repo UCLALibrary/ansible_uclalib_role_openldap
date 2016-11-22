@@ -1,1 +1,2 @@
-# uclalib_role_openldapserver
+# ansible_uclalib_role_awscli
+This role is used for configured LDAP master/slaves, and also connect clients to an existing LDAP infrastructure. The use of tags is needed to provide correct functionality.
