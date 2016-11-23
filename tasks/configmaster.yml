@@ -1,0 +1,20 @@
+---
+- name: Upload OpenLDAP monitor template
+  template:
+    src: olcDatabase-monitor.ldif.j2
+    dest: "{{ openldappath }}/slapd.d/cn=config/olcDatabase={2}bdb.ldif"
+    owner: ldap
+    group: ldap
+    mode: 0600
+  notify:
+    - Restart OpenLDAP services
+
+- name: Upload OpenLDAP bdb template
+  template:
+    src: olcDatabase-bdb.ldif.j2
+    dest: "{{ openldappath }}/slapd.d/cn=config/olcDatabase={1}monitor.ldif"
+    owner: ldap
+    group: ldap
+    mode: 0600
+  notify:
+    - Restart OpenLDAP services

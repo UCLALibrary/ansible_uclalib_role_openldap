@@ -1,0 +1,30 @@
+---
+- name: Start OpenLDAP services
+  service:
+    name: slapd
+    state: started
+
+- name: Stop OpenLDAP services
+  service:
+    name: slapd
+    state: stopped
+
+- name: Restart OpenLDAP services
+  service:
+    name: slapd
+    state: restarted
+
+- name: Start nslcd services
+  service:
+    name: nslcd
+    state: started
+
+- name: Stop nslcd services
+  service:
+    name: nslcd
+    state: stopped
+
+- name: Restart nslcd services
+  service:
+    name: nslcd
+    state: restarted

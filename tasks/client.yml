@@ -1,0 +1,17 @@
+---
+- name: Install OpenLDAP client
+  yum: 
+    name: "{{ openldapclient }}"
+    state: present
+
+- name: Install nslcd service
+  yum:
+    name: "{{ nslcdpackage }}"
+    state: present
+
+- name: Start nslcd on boot
+  service:
+    name: nslcd
+    enabled: yes
+  notify:
+    - Start nslcd services
