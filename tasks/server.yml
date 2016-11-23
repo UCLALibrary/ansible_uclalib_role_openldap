@@ -10,7 +10,3 @@
     enabled: yes
   notify:
     - Start OpenLDAP services
-
-- name: Install Kerberos LDAP Schema
-  yum:
-    name: krb5-server-ldap
